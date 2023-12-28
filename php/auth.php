@@ -1,9 +1,9 @@
 <?php
 
-class Auth
+class Auth  //OPP Class//
 {
-    private $conn;
-    public function __construct($conn)
+    private $conn;  //Properti privat//
+    public function __construct($conn)  //method public//
     {
         $this->conn = $conn;
     }
@@ -64,7 +64,7 @@ class Auth
 
     private function hashPassword($password)
     {
-        return hash('sha256', $password);
+        return hash('sha256', $password);   //Enkripsi menggunkan hash//
     }
 
     private function isEmailRegistered($email)
@@ -97,5 +97,8 @@ class Auth
         echo "<script>alert('$message')</script>";
     }
 }
+//Jawaban No.2//
+//Terdapat konsep OOP berupa class yang memiliki nama "Auth"//
+//Terdapat juga konsep OOP berupa enkapsulasi berupa attribut (atau variabel) password dan cpassword yang menggunakan enkripsi password menjadi elnumerik, serta penggunaan private function untuk membatasi akses terhadap method dan atributnya//
 
 ?>

@@ -1,10 +1,10 @@
 <?php
 include 'config.php';
 
-class PengaduanHandler {
-    private $conn;
+class PengaduanHandler {    //OOP class//
+    private $conn;  //Properti privat yang dibatasi aksesnya//
 
-    public function __construct($conn) {
+    public function __construct($conn) {    //Public function yang tidak dibatasi aksesnya//
         $this->conn = $conn;
     }
 
@@ -66,4 +66,6 @@ if (isset($_POST['buat'])) {
 
     $pengaduanHandler->createPengaduan($pengaduData, $kejadianData);
 }
+//Jawaban No.2//
+//Terdapat konsep OOP class dan objek, dimana class-nya bernama "PengaduanHandler"//
 ?>
